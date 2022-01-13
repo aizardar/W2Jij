@@ -6,10 +6,14 @@ Code to calculate magnetic exchange interactions with WANNIER90 output files wan
 
 ### Example input
 
-ni=0            # index of atom i, start from zero!
+##### index of atom i, start from zero!
+ni=0 
 
-nj=[0,1,2,3]            # With Rmax>0 specify only once per index, otherwise list all
-Rmax=26.0               # Maximum interatomic distance in Angstrom
+##### With Rmax>0 specify only once per index, otherwise list all
+nj=[0,1,2,3]      
+
+#### Maximum interatomic distance in Angstrom 
+Rmax=26.0            
 
 Note: Either specify Rmax and nj uniquely corresponding to those orbitals to which it should be calculated, then all Jij interactions are calculated for which the interatomic distance Rij < Rmax. This does not consider symmetries, so all neighbours are calculated even if equivalent.
 Another option is shown below. Specify each atom j explicitly, with atomic/orbital index j. The setting above will calculate all 6 NN and 12 2nd NN interactions, while that below three of the NN.
